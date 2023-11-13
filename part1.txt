@@ -1,0 +1,31 @@
+jb msg yha se america bhejna ho
+
+mobile se data packets ki form me nearest tower tk jata h, then tower se electical signals ki form me wires ke through jo ground me(samundar ke raste) faile huye h usa tk phuchta h then wha se electrical signal ki form me hi wps se nearest tower to receiver tk phuchta h or phir tower se receiver ke mobile tk packets ki form me phuchta h
+
+
+kb msg paas me bhejna ho
+
+mobile se tower tk,
+isp(internet service provider) jaise jio airtel etc checks ki whitelisted h ya nhi 
+if whitelisted to jaise msg ko delhi jana h to nearest tower to receiver tk phuchega and then receiver ke mobile me
+
+noone owns internet
+
+Router
+
+mac address pr work krta h, device se router and router is connected to internet 
+
+server
+
+computer system that is connected to the internet and is programmed to receive and send data
+
+client server architecture
+
+ 
+http - some rules for using internet
+
+https - data encrypted so hacking nhi ho paati
+
+ports -  is like gates or windows jiske through hm server se connect ho paate h
+close ports
+open ports

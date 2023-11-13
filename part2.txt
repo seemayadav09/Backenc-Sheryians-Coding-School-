@@ -1,0 +1,29 @@
+backend developer - jo server and db program krta h
+
+v8 engine ke code jo ki c++ me likha hua h usko rap kiya js ke code se that is nodejs
+
+npm is as playstore for node
+npm ek jgh h jha bhut saare packages hote h
+
+package --  files of codes
+
+express framework for node.js
+express ka use case - routing
+routing =>
+
+https:/www.facebook.com/profile
+
+/profile is route
+
+types of route
+GET POST DELETE PUT PATCH
+
+GET =>  route me data dikhta h....jaise google search krte h to url me woh search input hota h
+POST => route me data nhi dikhta h....jaise facebook login krte h toh email pswd url me nhi aata 
+
+middleware => if we want todo some task before route then we can use middleware function
+ 
+
+
+
+ 
