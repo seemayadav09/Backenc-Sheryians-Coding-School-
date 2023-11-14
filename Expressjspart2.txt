@@ -17,3 +17,5 @@ architecture of public folder
 
 with the help of express generator, we need not to do too much stuff in doing setup of express
 use express generator and it will make the folder structure for you and it will also write the basic code for the project
+
+
