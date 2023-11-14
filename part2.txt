@@ -6,6 +6,16 @@ npm is as playstore for node
 npm ek jgh h jha bhut saare packages hote h
 
 package --  files of codes
+// var figlet=require(`figlet`);
+
+// figlet("Happy Diwali",function (err, data) {
+//     if (err) {
+//       console.log("Something went wrong...");
+//       console.dir(err);
+//       return;
+//     }
+//     console.log(data); 
+//   });
 
 express framework for node.js
 express ka use case - routing

@@ -1,0 +1,36 @@
+node me http package se hm server bnate h
+
+server ke features ko use krne ke liye hm express ka code likhte h
+
+without express bhi hm server ke features ko use kr skte h with the help of http package  
+
+routing - routes bnane ka process
+
+ dynamic routing - esa koi bhi route jiska koi hissa baar baar same rhta h and kuchh hissa baar baar change ho iske liye hm dynamic route bnate h
+ex - /profile/seema /profile/nikki
+solution
+/profile/:username
+
+:username is params
+
+res.send(`hello from ${req.params.username}`)
+
+template engines => ye ek style of markup(jaise ejs) se convert krke aapko html dete h
+ex ejs, pug, handlebars, jade
+ejs is very very similar to html that is why we use it
+ejs is html with superpowers which can do calculation and can do javascript in html.
+how to setup ejs
+
+
+statis files :
+images, stylesheets, frontend js setup krna 
+
+static files setup krne ke liye 
+1 create folder called public
+2 create three folders inside it, images, stylesheets. javascripts
+3 configure the express static in script.js file
+4 understand the path
+
+
+error handling
+
