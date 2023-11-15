@@ -1,0 +1,50 @@
+flash messages
+
+install connect-flash
+make sure you setup express-session
+const expressSession=require('express-session')
+
+app.use(expressSession({
+  resave:false,
+  saveUninitialized: false,
+  secret:"fwigyuhdisojc"
+}))
+
+make sure you put connect flash in app.use function
+
+const flash=require("connect-flash")
+app.use(flash())
+
+kisi bhi route me aap ko flash create krna h 
+
+kisi bhi doosre route pr aap use chalane ka try kre
+
+aapp connect flash ko use nhi kr skte bina express session 
+
+
+flash messages allow krte h ki server ke kisi bhi route me bne data ko  doosre route pr use kr ske
+
+flash cross routes data ko use kr paata h
+
+in routes
+router.get('/failed',function(req,res){
+    req.flash("naam",data)
+})
+
+
+intermediate mongodb
+Authentication and Authorization
+steps --
+
+install below packages
+npm i passport passport-local passport-local-mongoose mongoose express-session
+codes are given in drive link
+https://drive.google.com/drive/folders/1Da85j14q1awDrIXkbUcs0FVKif8nj0wB
+write app.js code first in app.js file and wirte it after view engine and before logger
+
+setup users.js then properly 
+in index.js try register first and then otehr codes as well
+
+
+
+ 

@@ -1,0 +1,171 @@
+express js
+install
+express js boiler plate 
+    //go to npm 
+    //search express
+    //copy the code
+express js ejs setup
+    //install ejs
+    //set view engine
+    //create views folder
+    //create ejs files
+    //render ejs files inside route
+express static files setup 
+architecture of public folder
+
+
+
+with the help of express generator, we need not to do too much stuff in doing setup of express
+use express generator and it will make the folder structure for you and it will also write the basic code for the project
+
+
+express generator
+install globally 
+npm i express-generator -g 
+open cmd move to desktop
+create new app :
+express appname --view=ejs
+cd appname
+npm i
+
+
+mongodb
+code side -- db setup, model, schema
+mongodb side --db formation, collection, documents 
+
+model -- jese amazon app bna rhe h toh uske db me alg alg data hota h jaise user ka data product ka data etc
+to user section ke lie likha gya code model and usse jo db me user ka data bnta h woh hota h collection or ek user ki baat kri to document
+
+
+steps
+install mongodb
+install mongoosejs
+require and setup connection
+
+const mongoose = require("mongoose");
+mongoose.connect("mongodb://127.0.0.1:27017/dbname")
+
+make schema
+const userschema=mongoose.Schema({
+    username:String,
+    name:String,
+    age:Number
+})
+
+create model
+module.exports = mongoose.model("naam",userschema)
+
+
+routes ki index.js file(express generator se jo bnti h)
+
+var express=require("express");
+var router=express.Router();
+const userModel=require("./users");
+//users file me hmne below code likha h
+const mongoose = require("mongoose");
+mongoose.connect("mongodb://127.0.0.1:27017/dbname")
+
+make schema
+const userschema=mongoose.Schema({
+    username:String,
+    name:String,
+    age:Number
+})
+
+create model
+module.exports = mongoose.model("naam",userschema)
+
+router.get("/",function(req,res){
+    res.render("index");
+})
+
+router.get("/create", async function(req,res){
+    const createduser = await userModel.create({
+        username:"Harsh",
+        name:"HARSH",
+        age:23
+
+    })
+    res.send(createduser)
+    //async await lgane se res.send userModel.create ke baad hi chlega
+     
+})
+
+router.get("/allusers",async function(req,res){
+    let allusers=await userModel.find();
+    res.send(allusers);
+})
+
+//findOne({username:"harsh"})
+router.get("/delete",async function(req,res){
+    let deleteduser = await userModel.findOneAndDelete({
+        username: "harsh"
+    });
+    res.send(deleteduser);
+})
+ 
+
+module.exports=router;
+
+cookie and session both data ko save krne ke lie use hote h 
+
+cookie -- client pr save data
+session -- server pr save data
+
+
+sessions--
+
+install express-session
+
+write below code in app.js
+
+var session = require("express-session")
+app.use(session({
+    resave:false,
+    saveUninitialized: false,
+    secret:"fwigyuhdisojc"
+}))
+
+
+and then kisi bhi route me jake
+req.session.koibhinaam="hello"
+
+server pr koibhinaam se session bn jayega jiski value hello hogi
+
+session read
+router.get("/checkban",function(req,res){
+    console.log(req.session)
+    res.send("check console")
+})
+
+session delete
+router.get("/remove",function(req,res){
+    req.session.destroy(function(err){
+        console.log(err);
+        res.send("removed")
+    })
+})
+
+
+server restart hota h toh session delete jo jata h
+
+
+
+cookie
+install -- express - generator already kr deta h 
+
+then go to routes and
+res.cookie("naam",value)
+
+how to read cookie
+router.get("/read",function(req,res){
+    console.log(req.cookies);
+    res.send("check")
+})
+how to delete
+router.get("/delete",function(req,res){
+    res.clearCookie("naam")
+    res.send("cleared")
+})
+
+
